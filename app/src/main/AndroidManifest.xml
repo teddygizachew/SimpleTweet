@@ -10,14 +10,19 @@
     <application
         android:name=".TwitterApp"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".TimelineActivity"></activity>
+        <activity
+            android:name=".ComposeActivity"
+            android:theme="@style/TwitterAppTheme"/>
+        <activity
+            android:name=".TimelineActivity"
+            android:theme="@style/TwitterAppTheme" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme">
+            android:theme="@style/LoginAppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,6 +39,10 @@
                     android:scheme="@string/intent_scheme" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
